@@ -24,6 +24,8 @@ The elapsed time for both processes is displayed after the script finishes execu
 Be careful when entering/generating the number of digits for each value.
 Most CPUs are powerful enough to process up to 7-8 digit values, but everything above that could end up freezing or crashing your browser.
 Shorter freezes are normal, especially when processing larger values on the main thread, so be patient.
+Results of the test vary greatly depending on the browser and the hardware of your device.
+At the time of writing, Firefox doesn't support ES6 import statements inside workers so the program won't execute in this environment.
 
 ## Final note
 
