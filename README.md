@@ -2,7 +2,7 @@
 
 Project made to test the capabilities of dedicated Web Workers.
 
-You can play around with different settings here: [Demo](https://vibrant-babbage-51b502.netlify.app/)
+You can play around with different settings here: [Demo](https://vibrant-babbage-51b502.netlify.app/) (I recommend running the program locally since Netlify yields fluctuating results)
 
 Web Workers are scripts that, when executed, run on background threads away from the main execution thread. Data is sent between workers and the main thread via a system of messages. This allows for processing intensive tasks on a worker thread without interfering with the user interface.
 
