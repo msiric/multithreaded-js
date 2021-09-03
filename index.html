@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Multi-threaded JavaScript</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Web Workers performance test</h1>
+
+    <div class="controls" tabindex="0">
+      <form id="form">
+        <h2>Consecutively find all prime numbers up to the specified values</h2>
+        <div id="toolbar">
+          <div id="digits">
+            <label for="generator">Randomly generate</label>
+            <input
+              type="number"
+              class="tool"
+              id="generator"
+              min="1"
+              max="10"
+              value="7"
+            />
+            <label for="generator">digit numbers</label>
+            <p id="disclaimer">
+              Not recommended to calculate primes for large 8 (or greater) digit
+              numbers since doing so might freeze/crash your browser (depending
+              on your hardware)
+            </p>
+          </div>
+          <div id="threads">
+            <label for="thread">Number of threads</label>
+            <input
+              type="number"
+              class="tool"
+              id="thread"
+              min="1"
+              max="4"
+              value="4"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <label for="first">Enter first value: </label>
+          <input
+            class="input"
+            type="number"
+            id="first"
+            min="1"
+            value="10000000"
+            required
+          />
+        </div>
+        <div class="container">
+          <label for="second">Enter second value: </label>
+          <input
+            class="input"
+            type="number"
+            id="second"
+            min="1"
+            value="10000000"
+            required
+          />
+        </div>
+        <div class="container">
+          <label for="third">Enter third value: </label>
+          <input
+            class="input"
+            type="number"
+            id="third"
+            min="1"
+            value="10000000"
+            required
+          />
+        </div>
+        <div class="container">
+          <label for="fourth">Enter fourth value: </label>
+          <input
+            class="input"
+            type="number"
+            id="fourth"
+            min="1"
+            value="10000000"
+            required
+          />
+        </div>
+        <div id="actions">
+          <button type="submit" id="calculate">Calculate</button>
+          <button type="button" id="randomize">Randomize</button>
+        </div>
+      </form>
+      <div id="result">
+        <div id="primes"></div>
+        <p id="singlethread" data-label="Single-threaded"></p>
+        <p id="multithread" data-label="Multi-threaded"></p>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
