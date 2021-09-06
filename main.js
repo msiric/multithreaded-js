@@ -14,10 +14,6 @@ let startTime, totalTime, counter;
 const numberOfPrimesSingle = [];
 const numberOfPrimesMulti = [];
 
-const displayRemaining = (label, value) => {
-  remaining.textContent = `${label} executions remaining: ${value}`;
-};
-
 const displayPerformance = (id, value) => {
   const execution = document.querySelector(`#${id}`);
   execution.textContent = `${execution.dataset.label} elapsed time: ${value}`;
